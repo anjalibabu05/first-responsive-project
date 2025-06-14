@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+.container-fluid {
+    background-color:#6F4E37;
+}
+
+/* Dark navbar background */
+.navbar {
+  background-color: #222 !important;
+  height: 60px;
+  margin: 0;
+}
+
+/* Style each nav link */
+.nav-link {
+  color: bisque !important;
+  position: relative;
+  transition: all 0.3s ease;
+  text-decoration: none; /* Remove default underline */
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  background-color:   bisque ;
+  color: #000 !important;
+  text-decoration: none;
+}
+
+/* Fancy animated underline */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 12px;
+  bottom: 6px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+/* On hover, show underline */
+.nav-link:hover::after {
+  width: calc(100% - 24px); /* leave space for padding */
+}
+/* Fixed background image */
+.hero {
+  height: 100vh;
+  background-image: url('./images/test13.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding-left: 5%; /* space on left */
+  padding-right: 5%;
+}
+
+/* Overlay */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+/* Text styling */
+.hero .container {
+  z-index: 2;
+  position: relative;
+  max-width: 600px;
+}
+
+/* Carousel indicator styling */
+.carousel-indicators button {
+  background-color: #ffc107;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  margin-right: 8px;
+}
+
+
+.product-section
+{
+  padding-top:150px;
+  background-color: antiquewhite;
+  height:75vh;
+  width: 100%;
+}
+.product-item {
+  position: relative;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+}
+
+.product-thumbnail {
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover .product-thumbnail {
+  transform: scale(1.05);
+}
+
+.icon-cross {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.product-item:hover .icon-cross {
+  transform: translate(-50%, 0%);
+  opacity: 1;
+}
+
+.icon-cross img {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.icon-cross img:hover {
+  background: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+.col-12 a{
+  text-decoration: none;
+  color:black
+  ;
+  
+}
+.why-choose-section{
+  background-color: rgba(111, 78, 55, 0.5);
+  height: 70vh;
+  width: 100%;
+}
+.why-choose-section h2 {
+
+  color: #000;
+  font-weight: 600;
+}
+
+.icon-box {
+  background-color: #dce0dd;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.yellow-dots {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: radial-gradient(#f5b500 2px, transparent 2px);
+  background-size: 20px 20px;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+}
+
+.col-lg-6 img {
+  z-index: 2;
+  position: relative;
+}
+.side{
+  margin-right: 30px;
+  width: 300px;
+  height: 600px;
+}
+
+.rounded-custom {
+  border-radius: 20px;
+}
+
+.dot-pattern {
+  width: 100px;
+  height: 100px;
+  background-image: radial-gradient(#007b83 1px, transparent 1px);
+  background-size: 10px 10px;
+  z-index: 0;
+}
+
+.interior-section {
+  background-color:beige;
+  position: relative;
+}
+
+.testimonials-section{
+  height: 60vh;
+  
+  background-color:rgba(111, 78, 55, 0.5);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+}
+.footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer{
+  background-color: #decdc0;
+}
+/* Footer link hover effect */
+.footer a {
+  color: #ccc;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Social media icon hover effect */
+.footer .fab {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .fab:hover {
+  color: brown; /* You can change to any highlight color */
+  transform: scale(1.2);
+}
+
+
+
+
